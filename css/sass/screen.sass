@@ -1,0 +1,230 @@
+@import reset
+@import grid
+@import monochrome
+@import mixins
+@import forms
+
+/*----------------------------------------------------------------------
+
+body
+  font: 14px/1.5 $serif
+  color: #333
+  background: #fff
+
+$link: #06c
+
+a
+  color: $link
+  text-decoration: none
+  &:hover, &:focus
+    border-bottom: 1px solid #06c
+
+/*----------------------------------------------------------------------
+
+header
+  .head
+    @extend .cnt
+    height: 100px
+    border-bottom: 1px solid #ddd
+
+    a.logo
+      +col($s7)
+      display: block
+      margin: 20px 0
+      color: #333
+
+      &:hover
+        border: none
+
+      img
+        height: 60px
+        width: 60px
+        float: left
+        margin-right: 10px
+
+      .text
+        float: left
+        margin: 7px 0 0
+
+        h1
+          font: 24px/1 $serif
+          text-transform: uppercase
+          .w, .a
+            font-size: 120%
+        p
+          font: italic 13px/1 $serif
+          margin-left: 5px
+
+    form
+      +col($s5)
+      display: block
+      margin: 38px 0 0
+      input.field
+        margin-left: 18px
+        width: $s3
+      input.submit
+
+  nav
+    @extend .cnt
+    border-bottom: 1px solid #ddd
+
+    &.top
+      font: 12px/30px $sans
+
+      ul.main
+        +col($s7)
+        li
+          float: left
+          h5
+            font-weight: normal
+            margin-right: 21px
+            color: #333
+            cursor: pointer
+          ul
+            display: none
+
+      ul.user
+        +col($s5)
+        li
+          float: right
+          a
+            font: 11px/30px $sans
+            margin-left: 21px
+
+    &.main
+      background: #eee
+      ul
+        +col
+        li
+          float: left
+          a
+            margin-right: 21px
+            font: bold 13px/30px $sans
+            color: #333
+            &:hover
+              color: $link
+
+    &.page
+      font: 11px/30px $sans
+
+      &:hover a
+        color: $link
+
+      li.active a
+        color: #999
+
+      a
+        color: transparent
+        +transition
+
+      ul.main
+        +col($s6)
+        li
+          float: left
+          a
+            margin-right: 21px
+
+      ul.side
+        +col($s6)
+        li
+          float: right
+          a
+            margin-left: 21px
+
+/*----------------------------------------------------------------------
+
+#content
+  @extend .cnt
+
+  ul
+    li
+      margin: 0 0 8px
+
+  .column
+
+    h2
+      padding: 21px 42px 5px 0
+      font: bold 12px/1 $sans
+      text-transform: uppercase
+      letter-spacing: 3px
+
+    &.main
+      +col($s7)
+      width: $s7 - $gutter - 1px
+      padding-bottom: 50px
+      margin: 0 0 100px
+      border-right: 1px solid #ddd
+
+      h3
+        font: bold 48px/.9em $sans
+        padding: 0 42px 10px 0
+        letter-spacing: -3px
+        a
+          color: #333
+          +transition
+          &:hover
+            color: $link
+            border: none
+
+      p, ul
+        padding: 0 42px 1.5em 0
+
+      a img
+        float: left
+        margin: 4px 12px 0 0
+
+      #featured
+        h3
+          font-size: 60px
+        p
+          font: 14px/1.5 $serif
+
+      #potd
+        a img
+          width: 160px * .75
+          height: 240px * .75
+
+      #sister-projects
+        ul 
+          overflow: hidden
+          li
+            +flush($s2)
+            height: $s1
+            a
+              display: block
+
+              &:hover
+                border: none
+
+              img
+                float: left
+                margin: 0 5px 50px 0
+                display: none
+              p
+                strong
+                  display: block
+
+    &.side
+      +flush($s5)
+      font: 12px/1.5 $sans
+      
+      h2
+        padding: 21px 0 21px
+        margin: 0 24px
+
+      p, ul
+        padding: 0 30px 1.5em 24px
+
+      a img
+        float: right
+        margin: 0 30px 12px 20px
+
+      section
+        border-bottom: 1px solid #ddd
+
+        &#footer
+          border: none
+
+          ul
+            li
+              margin: 0
