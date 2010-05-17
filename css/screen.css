@@ -202,7 +202,7 @@ header .head {
 header nav {
   border-bottom: 1px solid #dddddd; }
   header nav.top {
-    font: 12px/30px "Helvetica Neue", Arial, Helvetica, sans-serif; }
+    font: 13px/30px "Helvetica Neue", Arial, Helvetica, sans-serif; }
     header nav.top ul.main {
       width: 576px;
       padding: 0 6px;
@@ -223,7 +223,6 @@ header nav {
       header nav.top ul.user li {
         float: right; }
         header nav.top ul.user li a {
-          font: 11px/30px "Helvetica Neue", Arial, Helvetica, sans-serif;
           margin-left: 21px; }
   header nav.main {
     background: #eeeeee; }
@@ -240,7 +239,7 @@ header nav {
           header nav.main ul li a:hover {
             color: #0066cc; }
   header nav.page {
-    font: 11px/30px "Helvetica Neue", Arial, Helvetica, sans-serif; }
+    font: 13px/30px "Helvetica Neue", Arial, Helvetica, sans-serif; }
     header nav.page:hover a {
       color: #0066cc; }
     header nav.page li.active a {
@@ -273,7 +272,7 @@ header nav {
   margin: 0 0 8px; }
 #content .column h2 {
   padding: 21px 42px 5px 0;
-  font: bold 12px/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font: bold 13px/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px; }
 #content .column.main {
@@ -328,7 +327,7 @@ header nav {
 #content .column.side {
   width: 420px;
   float: left;
-  font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font: 13px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif; }
   #content .column.side h2 {
     padding: 21px 0 21px;
     margin: 0 24px; }
