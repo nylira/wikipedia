@@ -28,8 +28,6 @@ a
 header
   .head
     @extend .cnt
-    height: 100px
-    border-bottom: 1px solid #ddd
 
     a.logo
       +col($s6)
@@ -61,9 +59,11 @@ header
 
   nav
     @extend .cnt
+    line-height: 30px
 
     &.top
-      font: 13px/30px $sans
+      font-size: 12px
+      border-bottom: 1px solid #ddd
 
       ul.main
         +col($s6)
@@ -75,7 +75,6 @@ header
           h5
             font-weight: normal
             margin-right: 21px
-            color: #333
             cursor: pointer
           ul
             display: none
@@ -88,17 +87,23 @@ header
         li
           float: right
           a
-            margin-left: 21px
+            color: #333
+            text-transform: uppercase
+            &:hover
+              color: $link
 
     &.main
-      border-bottom: 1px solid #ddd
       ul
         +col
         li
           float: left
+          line-height: 13px
+          margin: 9px 12px 8px 0
+          padding-right: 12px
+          border-right: 1px solid #ccc
+          &:last-of-type
+            border-right: none
           a
-            margin-right: 21px
-            font: 13px/30px $serif
             color: #333
             text-transform: uppercase
 
@@ -106,7 +111,7 @@ header
               color: $link
 
     &.page
-      font: 14px/30px $sans
+      font-size: 12px
       border-bottom: 3px solid #ddd
       margin-bottom: 2px
 
@@ -150,7 +155,7 @@ header
 
   ul
     li
-      padding: 0 0 8px
+      padding: 0 0 9px
 
   .column
     border-right: 1px solid #ddd
@@ -164,6 +169,7 @@ header
     &.main
       +col($s6)
       width: $s6 - $gutter - 1px
+      padding-bottom: 50px
 
       h2
         padding-right: 42px
@@ -204,11 +210,11 @@ header
       width: $s3 - $gutter - 1px
 
       h2
-        padding: 24px 18px 10px
+        padding: 24px 22px 10px 14px
         border-top: 1px solid #ddd
 
       p, ul
-        padding: 0 18px 1.5em
+        padding: 0 22px 1.5em 14px
 
       &.two
         border: none
@@ -254,18 +260,18 @@ header
 footer
   @extend .cnt
   border-top: 1px solid #ddd
-  padding: 30px 0 50px
+  padding: 1.5em 0 3em
   font: 12px/1.4 $serif
 
   p
-    +col($s3)
-    width: $s3 - 2 * $gutter
+    +col($s4)
+    width: $s4 - 2 * $gutter
     margin-right: $gutter
 
   ul
-    +flush($s6)
+    +flush($s4)
 
     li
-      +col($s3)
-      width: $s3 - $gutter - 18px
+      +col($s2)
+      width: $s2 - $gutter - 18px
       margin-left: 18px
