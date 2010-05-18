@@ -7,7 +7,7 @@
 /*----------------------------------------------------------------------
 
 body
-  font: 14px/1.5 $serif
+  font: 13px/1.6 $serif
   color: #333
   background: #fff
 
@@ -18,6 +18,10 @@ a
   text-decoration: none
   &:hover, &:focus
     border-bottom: 1px solid #06c
+  &:visited
+    color: #60c
+    &:hover
+      border-bottom-color: #60c
 
 /*----------------------------------------------------------------------
 
@@ -28,51 +32,44 @@ header
     border-bottom: 1px solid #ddd
 
     a.logo
-      +col($s7)
+      +col($s6)
       display: block
-      margin: 20px 0
+      margin: 25px 0
       color: #333
 
       &:hover
         border: none
 
       img
-        height: 60px
-        width: 60px
+        height: 50px
+        width: 50px
         float: left
         margin-right: 10px
 
-      .text
-        float: left
-        margin: 7px 0 0
-
-        h1
-          font: 24px/1 $serif
-          text-transform: uppercase
-          .w, .a
-            font-size: 120%
-        p
-          font: italic 13px/1 $serif
-          margin-left: 5px
+      h1
+        font: 30px/50px $serif
+        text-transform: uppercase
 
     form
-      +col($s5)
+      +flush($s6)
       display: block
       margin: 38px 0 0
       input.field
-        margin-left: 18px
-        width: $s3
+        margin-left: 24px
+        width: $s4
       input.submit
 
   nav
     @extend .cnt
-    border-bottom: 1px solid #ddd
 
     &.top
       font: 13px/30px $sans
 
       ul.main
-        +col($s7)
+        +col($s6)
+        opacity: 0
+        +transition
+
         li
           float: left
           h5
@@ -83,34 +80,44 @@ header
           ul
             display: none
 
+      &:hover ul.main
+        opacity: 1
+
       ul.user
-        +col($s5)
+        +col($s6)
         li
           float: right
           a
             margin-left: 21px
 
     &.main
-      background: #eee
+      border-bottom: 1px solid #ddd
       ul
         +col
         li
           float: left
           a
             margin-right: 21px
-            font: bold 13px/30px $sans
+            font: 13px/30px $serif
             color: #333
+            text-transform: uppercase
+
             &:hover
               color: $link
 
     &.page
-      font: 13px/30px $sans
+      font: 14px/30px $sans
+      border-bottom: 3px solid #ddd
+      margin-bottom: 2px
 
-      &:hover a
-        color: $link
+      &:hover 
+        a
+          color: $link
 
-      li.active a
-        color: #999
+        li.active a
+          color: #999
+          &:hover
+            border: none
 
       a
         color: transparent
@@ -134,29 +141,37 @@ header
 
 #content
   @extend .cnt
+  width: $s12 - 1px
+  padding: 0 0 80px
+  margin-bottom: 2px
+  border: 1px solid #ddd
+  border-bottom: 3px solid #ddd
+  border-left: none
 
   ul
     li
-      margin: 0 0 8px
+      padding: 0 0 8px
 
   .column
+    border-right: 1px solid #ddd
 
     h2
-      padding: 21px 42px 5px 0
-      font: bold 13px/1 $sans
+      font-weight: bold
       text-transform: uppercase
-      letter-spacing: 3px
-
+      letter-spacing: 2px
+      padding: 1.5em 0 10px
+    
     &.main
-      +col($s7)
-      width: $s7 - $gutter - 1px
-      padding-bottom: 50px
-      margin: 0 0 100px
-      border-right: 1px solid #ddd
+      +col($s6)
+      width: $s6 - $gutter - 1px
+
+      h2
+        padding-right: 42px
 
       h3
-        font: bold 48px/.9em $sans
+        font: bold 60px/1 $serif
         padding: 0 42px 10px 0
+        margin: -5px 0 0
         letter-spacing: -3px
         a
           color: #333
@@ -167,63 +182,90 @@ header
 
       p, ul
         padding: 0 42px 1.5em 0
-
+      
       a img
         float: left
         margin: 4px 12px 0 0
 
-      #featured
-        h3
-          font-size: 60px
-        p
-          font: 14px/1.5 $serif
 
+      #featured
+        a img
+          width: 150px * .95
+          height: 200px * .95
+
+      #did-you-know
       #potd
         a img
-          width: 160px * .75
-          height: 240px * .75
-
-      #sister-projects
-        ul 
-          overflow: hidden
-          li
-            +flush($s2)
-            height: $s1
-            a
-              display: block
-
-              &:hover
-                border: none
-
-              img
-                float: left
-                margin: 0 5px 50px 0
-                display: none
-              p
-                strong
-                  display: block
+          width: 160px
+          height: 240px
 
     &.side
-      +flush($s5)
-      font: 13px/1.4 $sans
-      
+      +col($s3)
+      width: $s3 - $gutter - 1px
+
       h2
-        padding: 21px 0 21px
-        margin: 0 24px
+        padding: 24px 18px 10px
+        border-top: 1px solid #ddd
 
       p, ul
-        padding: 0 30px 1.5em 24px
+        padding: 0 18px 1.5em
+
+      &.two
+        border: none
+        ul li
+          padding: 0
 
       a img
         float: right
         margin: 0 30px 12px 20px
+        display: none
 
       section
-        border-bottom: 1px solid #ddd
+        border-bottom: 3px solid #ddd
+        margin: 0 0 2px
 
-        &#footer
+        &:last-of-type
           border: none
 
-          ul
-            li
-              margin: 0
+        &#in-the-news
+          h2
+            border: none
+
+        &#other-areas
+          margin-top: 1.5em
+
+        &#lang
+
+        &#sister-projects
+          img
+            display: none
+
+    ul.hidden
+      opacity: 0
+      +transition
+      font: 12px/1.5 $sans !important
+      color: #777
+      li
+        padding: 0
+
+    section:hover .hidden
+      opacity: 1
+
+footer
+  @extend .cnt
+  border-top: 1px solid #ddd
+  padding: 30px 0 50px
+  font: 12px/1.4 $serif
+
+  p
+    +col($s3)
+    width: $s3 - 2 * $gutter
+    margin-right: $gutter
+
+  ul
+    +flush($s6)
+
+    li
+      +col($s3)
+      width: $s3 - $gutter - 18px
+      margin-left: 18px
