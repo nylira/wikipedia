@@ -11,9 +11,9 @@
 <body>
 <script type="text/javascript">$('body').addClass('js');</script>
 
-<header>
+<div id="header">
 
-<nav class="top">
+<div class="nav top">
   <ul class="main">
     <li>
       <h5>Navigation</h5> 
@@ -58,21 +58,14 @@
     <li><a href="#">Sign in</a></li>
   </ul>
 
-</nav>
+</div><!--nav-top-->
 
 <div class="head">
   <a class="logo" href="#">
     <img src="http://upload.wikimedia.org/wikipedia/meta/2/2a/Nohat-logo-nowords-bgwhite-200px.jpg">
     <h1>Wikipedia</h1>
   </a>
-  <form>
-    <input class="field" type="text">
-    <input class="submit" type="submit" value="Search">
-  </form>
-</div>
-
-<nav class="main"> 
-  <ul>
+<ul>
     <li><a href="/wiki/Portal:Arts" title="Portal:Arts">Arts</a></li> 
     <li><a href="/wiki/Portal:Biography" title="Portal:Biography">Biography</a></li> 
     <li><a href="/wiki/Portal:Geography" title="Portal:Geography">Geography</a></li> 
@@ -81,11 +74,18 @@
     <li><a href="/wiki/Portal:Science" title="Portal:Science">Science</a></li> 
     <li><a href="/wiki/Portal:Society" title="Portal:Society">Society</a></li> 
     <li><a href="/wiki/Portal:Technology" title="Portal:Technology">Technology</a></li> 
-    <li><a href="/wiki/Portal:Contents/Portals" title="Portal:Contents/Portals">All portals &raquo;</a></li> 
+ <!--   <li><a href="/wiki/Portal:Contents/Portals" title="Portal:Contents/Portals">All portals &raquo;</a></li> -->
+    <li class="search">
+      <form>
+        <input class="field" type="text">
+        <input class="submit" type="submit" value="Search">
+      </form>
+    </li>
   </ul>
-</nav>
 
-<nav class="page">
+ </div>
+
+<div class="nav page">
   <ul class="main">
     <li class="active"><a href="#">Main Page</a></li>
     <li><a href="#">Discussion</a></li>
@@ -95,25 +95,24 @@
     <li><a href="#">View source</a></li>
     <li class="active"><a href="#">Read</a></li>
   </ul>
+</div><!--nav-page-->
 
-  </nav>
-
-</header>
+</div><!--header-->
 
 <div id="content">
 
   <div class="main column">
     
-  <section id="featured">
+  <div id="featured">
     <h2>Today&rsquo;s featured article</h2>
     <h3><a href="/wiki/Quirigu%C3%A1" title="Quiriguá">Quiriguá</a></h3>
     <a href="#"><img src="i/450px-QuiriguaStela1.jpg"></a>
     
     <p><strong><a href="/wiki/Quirigu%C3%A1" title="Quiriguá">Quiriguá</a></strong> is an ancient <a href="/wiki/Maya_civilization" title="Maya civilization">Maya</a> <a href="/wiki/Archaeological_site" title="Archaeological site">archaeological site</a> in the <a href="/wiki/Departments_of_Guatemala" title="Departments of Guatemala">department</a> of <a href="/wiki/Izabal_Department" title="Izabal Department">Izabal</a> in south-eastern <a href="/wiki/Guatemala" title="Guatemala">Guatemala</a>. It is a medium-sized site covering approximately 3 square kilometres (1.2 sq mi) along the lower <a href="/wiki/Motagua_River" title="Motagua River">Motagua River</a>, with the ceremonial center about 1 km (0.6 mi) from the north bank. During the <a href="/wiki/Mesoamerican_chronology" title="Mesoamerican chronology">Maya Classic Period</a>, Quiriguá was situated at the juncture of several important <a href="/wiki/Trade_in_Maya_civilization" title="Trade in Maya civilization">trade routes</a>. The site was occupied by 200, construction on the <a href="/wiki/Acropolis" title="Acropolis">acropolis</a> had begun by about 550, and an explosion of grander construction started in the 8th century. All construction had halted by about 850, except for a brief period of reoccupation in the Early <a href="/wiki/Mesoamerican_chronology#Postclassic_period" title="Mesoamerican chronology">Postclassic</a>. Quiriguá shares its architectural and sculptural styles with the nearby Classic Period city of <a href="/wiki/Cop%C3%A1n" title="Copán">Copán</a>, with whose history it is closely entwined. Quiriguá&rsquo;s rapid expansion in the 8th century was tied to king <a href="/wiki/K%27ak%27_Tiliw_Chan_Yopaat" title="K'ak' Tiliw Chan Yopaat">K'ak' Tiliw Chan Yopaat</a>&rsquo;s military victory over Copán in 738. When the greatest king of Copán, <a href="/wiki/Uaxaclajuun_Ub%27aah_K%27awiil" title="Uaxaclajuun Ub'aah K'awiil">Uaxaclajuun Ub'aah K'awiil</a> or "18-Rabbit", was defeated, he was captured and then sacrificed in the Great Plaza at Quiriguá. Before this, Quiriguá had been a <a href="/wiki/Vassal_state" title="Vassal state">vassal state</a> of Copán, but it maintained its independence afterwards. The ceremonial <a href="/wiki/Maya_architecture" title="Maya architecture">architecture</a> at Quiriguá is quite modest, but the site&rsquo;s importance lies in its wealth of sculpture, including the tallest stone <a href="/wiki/Monumental_sculpture" title="Monumental sculpture">monuments</a> ever erected in the <a href="/wiki/New_World" title="New World">New World</a>. &hellip; <a href="/wiki/Quirigu%C3%A1" title="Quiriguá">(read more)</a></strong></p>
 
-    </section><!--featured-->
+    </div><!--featured-->
 
-  <section id="did-you-know">
+  <div id="did-you-know">
     
     <h2>Did you know&hellip;</h2>
 
@@ -129,20 +128,20 @@
       <li>That <strong><a href="/wiki/The_Burnett_Center" title="The Burnett Center">The Burnett Center</a></strong> academic building at <a href="/wiki/Washington_%26_Jefferson_College" title="Washington &amp; Jefferson College">Washington &amp; Jefferson College</a> is adorned with <a href="/wiki/Cast_iron" title="Cast iron">cast iron</a> <a href="/wiki/Fleur-de-lis" title="Fleur-de-lis">fleur-de-lis</a> <a href="/wiki/Balusters" title="Balusters" class="mw-redirect">balusters</a> that were salvaged from the former <a href="/wiki/Hays_Hall" title="Hays Hall">Hays Hall</a> dormitory?</li> 
     <li>That the 1982 play <i><strong><a href="/wiki/Intimate_Exchanges" title="Intimate Exchanges">Intimate Exchanges</a></strong></i> by <a href="/wiki/Alan_Ayckbourn" title="Alan Ayckbourn">Alan Ayckbourn</a> includes 31 scenes, 16 possible endings, 10 characters, and 8 major plot variations, all performed by only 2 actors?</li> 
     </ul> 
-  </section><!--did-you-know-->
+  </div><!--did-you-know-->
     
-    <section id="potd">
+    <div id="potd">
 	    <h2>Picture of the day</h2>
 	    <a href="/wiki/File:Anemone_hupehensis_var._japonica_1.jpg" class="image" title="Anemone hupehensis"><img alt="Anemone hupehensis" src="i/220px-Anemone_hupehensis_var._japonica_1.jpg" /></a>
 	    <p><i><strong><a href="/wiki/Anemone_hupehensis" title="Anemone hupehensis">Anemone hupehensis</a></strong></i> var. <i>japonica</i>, a type of <a href="/wiki/Buttercup" title="Buttercup" class="mw-redirect">buttercup</a> in the <a href="/wiki/Genus" title="Genus">genus</a> <i><a href="/wiki/Anemone" title="Anemone">Anemone</a></i>. <i>Anemone hupehensis</i> is commonly called the "<a href="/wiki/Japan" title="Japan">Japanese</a> anemone", but it is actually native to <a href="/wiki/China" title="China">China</a>. The flower&rsquo;s <a href="/wiki/Petal" title="Petal">petals</a> may be white, purple, or pink in color, with yellow <a href="/wiki/Stamen" title="Stamen">stamens</a> and green <a href="/wiki/Foliage" title="Foliage" class="mw-redirect">foliage</a>. It produces three-parted leaves in clumps about 2 feet (0.61 m) wide. The plant may also be invasive or weedy in some areas, due to its tendency to spread quickly if left alone and the fact that it can survive in all but the hottest and driest conditions.</p> 
-    </section><!--potd--> 
+    </div><!--potd--> 
 
   </div><!--main-column-->
 
 
   <div class="side column one">
 
-  <section id="in-the-news">
+  <div id="in-the-news">
     <h2>In the news</h2>
     <a href="/wiki/File:STS-132_launching_ITN.jpg" class="image" title="Space Shuttle Atlantis"><img alt="Space Shuttle Atlantis" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/46/STS-132_launching_ITN.jpg/57px-STS-132_launching_ITN.jpg" width="57" height="100" /></a>
     <ul> 
@@ -156,9 +155,9 @@
       </li> 
     </ul>
 
-    </section><!--in-the-news--> 
+    </div><!--in-the-news--> 
 
-  <section id="on-this-day">
+  <div id="on-this-day">
     <h2>On this day&hellip;</h2>
 
     <p><strong><span class="mw-formatted-date" title="05-15"><a href="/wiki/May_15" title="May 15">May 15</a></span></strong>: <strong><a href="/wiki/Armed_Forces_Day" title="Armed Forces Day">Armed Forces Day</a></strong> in the <a href="/wiki/United_States" title="United States">United States</a> (<a href="/wiki/2010" title="2010">2010</a>); <a href="/wiki/Independence_Day" title="Independence Day" class="mw-redirect">Independence Day</a> in <strong><a href="/wiki/Paraguay" title="Paraguay">Paraguay</a></strong>; <strong><a href="/wiki/Teachers%27_Day" title="Teachers' Day">Teachers' Day</a></strong> in <a href="/wiki/Mexico" title="Mexico">Mexico</a> and <a href="/wiki/South_Korea" title="South Korea">South Korea</a>; <strong><a href="/wiki/Nakba_Day" title="Nakba Day">Nakba Day</a></strong> in <a href="/wiki/Palestinian_people" title="Palestinian people">Palestinian communities</a></p> 
@@ -174,13 +173,13 @@
       <li><a href="/wiki/1966" title="1966">1966</a> &ndash; After a policy dispute, <a href="/wiki/Leaders_of_South_Vietnam" title="Leaders of South Vietnam">South Vietnamese Prime Minister</a> <a href="/wiki/Nguyễn_Cao_Kỳ" title="Nguyễn Cao Kỳ">Nguyễn Cao Kỳ</a>&rsquo;s ruling junta launched a military attack on the forces of General <strong><a href="/wiki/Ton_That_Dinh" title="Ton That Dinh">Ton That Dinh</a></strong>, forcing him to abandon his command.</li> 
     </ul> 
 
-  </section><!--on-this-day-->
+  </div><!--on-this-day-->
   </div><!--column1-->
 
 
   <div class="side column two">
 
-  <section id="other-areas"> 
+  <div id="other-areas"> 
     <ul> 
       <li><a href="/wiki/Wikipedia:Help_desk" title="Wikipedia:Help desk">Help desk</a></li> 
       <li><a href="/wiki/Wikipedia:Reference_desk" title="Wikipedia:Reference desk">Reference desk</a></li> 
@@ -189,9 +188,9 @@
       <li><a href="/wiki/Wikipedia:News" title="Wikipedia:News">Site news</a></li> 
       <li><a href="/wiki/Wikipedia:Local_Embassy" title="Wikipedia:Local Embassy">Local embassy</a></li> 
     </ul> 
-  </section><!--other-areas-->
+  </div><!--other-areas-->
 
- 	<section id="lang"> 
+ 	<div id="lang"> 
   <h2>Other Languages
   </h2> 
   <ul> 
@@ -237,10 +236,10 @@
 	<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/">Українська</a></li> 
 	<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/">中文</a></li> 
       </ul> 
- </section>
+ </div>
 <!--lang-->
 
-<section id="sister-projects"> 
+<div id="sister-projects"> 
 	<h2>Sister projects</h2> 
 	<ul>
 		<li><a href="http://commons.wikimedia.org/" rel="nofollow">Commons</a></li> 
@@ -253,13 +252,13 @@
 		<li><a href="http://en.wikiversity.org/" rel="nofollow">Wikiversity</a></li>
 		<li><a href="http://meta.wikimedia.org/" rel="nofollow">Meta-Wiki</a></li>
 	</ul>
-</section>
+</div>
 
   </div><!--sidebar-->
 
 </div><!--content-->
 
-<footer>
+<div id="footer">
   <p>Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a>.
 See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.</p>
 
@@ -272,7 +271,7 @@ See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> 
     <li><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li> 
   </ul> 
 
-</footer>
+</div>
 
 <!--analytics-->
 <script type="text/javascript">
